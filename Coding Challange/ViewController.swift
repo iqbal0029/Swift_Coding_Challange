@@ -17,7 +17,11 @@ class ViewController: NSViewController {
     
     //MARK: Chapter 3 Files
     func filesCodingChallage() {
-        
+        //challenge27(filename: "Sample1.rtf", lineCount: 0)
+        //challenge28(log: "Secret Message", to: "CodingChallange.log")
+        //print(challenge30(in: "/Users/faisal.ikwal/Desktop/Screen_shot"))
+       // print(challenge31(source: "/Users/faisal.ikwal/Desktop/Screen_shot/SSH.pngg", destination: "/Users/faisal.ikwal/Documents/SSH.png"))
+        print(challenge32(filename: "Sample1.rtf", count: "Julius"))
     }
     
     //MARK: Chapter 2 Numbers

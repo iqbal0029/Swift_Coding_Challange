@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F02D383521AFAADB009B2C20 /* Sample1.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F02D383421AFAADB009B2C20 /* Sample1.rtf */; };
 		F03A270121AD03F300141898 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03A270021AD03F300141898 /* Strings.swift */; };
 		F03A270321AD055700141898 /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03A270221AD055700141898 /* Numbers.swift */; };
 		F03A270621AD64C800141898 /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03A270521AD64C800141898 /* Files.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F02D383421AFAADB009B2C20 /* Sample1.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Sample1.rtf; sourceTree = "<group>"; };
 		F03A270021AD03F300141898 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		F03A270221AD055700141898 /* Numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
 		F03A270521AD64C800141898 /* Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
@@ -42,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F02D383321AFAA88009B2C20 /* TextFiles */ = {
+			isa = PBXGroup;
+			children = (
+				F02D383421AFAADB009B2C20 /* Sample1.rtf */,
+			);
+			path = TextFiles;
+			sourceTree = "<group>";
+		};
 		F03A270421AD057600141898 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +84,7 @@
 				F03A270021AD03F300141898 /* Strings.swift */,
 				F03A270221AD055700141898 /* Numbers.swift */,
 				F03A270521AD64C800141898 /* Files.swift */,
+				F02D383321AFAA88009B2C20 /* TextFiles */,
 				F03A270421AD057600141898 /* Utilities */,
 				F0E18EAE21A26CFF00016795 /* Assets.xcassets */,
 				F0E18EB021A26CFF00016795 /* Main.storyboard */,
@@ -143,6 +154,7 @@
 			files = (
 				F0E18EAF21A26CFF00016795 /* Assets.xcassets in Resources */,
 				F0E18EB221A26CFF00016795 /* Main.storyboard in Resources */,
+				F02D383521AFAADB009B2C20 /* Sample1.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +307,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Coding Challange/Coding_Challange.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Coding Challange/Info.plist";
@@ -313,7 +324,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Coding Challange/Coding_Challange.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Coding Challange/Info.plist";
