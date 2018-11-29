@@ -24,8 +24,8 @@ extension BinaryInteger {
     }
 }
 
-extension Array {
-    subscript(safe index: Int) -> Element? {
+extension MutableCollection where Index == Int {
+    subscript(safe index: Index) -> Element? {
         guard self.count > index else { return nil }
         return self[index]
     }
