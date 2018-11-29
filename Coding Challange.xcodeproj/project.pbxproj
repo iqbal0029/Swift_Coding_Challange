@@ -52,6 +52,16 @@
 			path = TextFiles;
 			sourceTree = "<group>";
 		};
+		F02D383721AFFCEC009B2C20 /* Chapters */ = {
+			isa = PBXGroup;
+			children = (
+				F03A270021AD03F300141898 /* Strings.swift */,
+				F03A270221AD055700141898 /* Numbers.swift */,
+				F03A270521AD64C800141898 /* Files.swift */,
+			);
+			path = Chapters;
+			sourceTree = "<group>";
+		};
 		F03A270421AD057600141898 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,9 +91,7 @@
 			children = (
 				F0E18EAA21A26CFE00016795 /* AppDelegate.swift */,
 				F0E18EAC21A26CFE00016795 /* ViewController.swift */,
-				F03A270021AD03F300141898 /* Strings.swift */,
-				F03A270221AD055700141898 /* Numbers.swift */,
-				F03A270521AD64C800141898 /* Files.swift */,
+				F02D383721AFFCEC009B2C20 /* Chapters */,
 				F02D383321AFAA88009B2C20 /* TextFiles */,
 				F03A270421AD057600141898 /* Utilities */,
 				F0E18EAE21A26CFF00016795 /* Assets.xcassets */,
