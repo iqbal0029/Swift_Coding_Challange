@@ -10,7 +10,7 @@ import Foundation
 
 func bundleUrlFor(filename: String) -> URL? {
     let pathArray = filename.components(separatedBy: ".")
-    return Bundle.main.url(forResource: pathArray[0], withExtension: pathArray[1])
+    return Bundle.main.url(forResource: pathArray[0], withExtension: pathArray[safe: 1] ?? "")
 }
 
 var documentsFolderURL: URL {
@@ -120,4 +120,52 @@ func challenge32(filename: String, count: String) -> Int {
     //let wordArray = contents.components(separatedBy: .whitespacesAndNewlines)
     let wordArray = contents.components(separatedBy: characterSet)
     return NSCountedSet(array: wordArray).count(for: count)
+}
+
+/*
+Write a function that accepts the name of a directory to scan, and returns an array of filenames that appear more than once in that directory or any of its subdirectories. Your function should scan all subdirectories, including subdirectories of subdirectories.
+ */
+func challenge33(in directory: String) -> [String] {
+    let fm = FileManager.default
+    let dirURL = URL(fileURLWithPath: directory)
+    guard let dirEnum = fm.enumerator(at: dirURL, includingPropertiesForKeys: nil) else { return [] }
+    
+    var seen = Set<String>()
+    var duplicate = Set<String>()
+    for case let item as URL in dirEnum {
+        guard item.hasDirectoryPath == false else { continue }
+        let fileName = item.lastPathComponent
+        if seen.contains(fileName) {
+            duplicate.insert(fileName)
+        } else {
+            seen.insert(fileName)
+        }
+    }
+    return Array(duplicate)
+}
+/*
+ Write a function that accepts the name of a directory to scan, and returns an array containing the name of any executable files in there.
+ */
+
+func challenge34(in directory: String) -> [String] {
+    let fm = FileManager.default
+    let dirURL = URL(fileURLWithPath: directory)
+    guard let files = try? fm.contentsOfDirectory(at: dirURL, includingPropertiesForKeys: nil) else { return [] }
+    var executables = [String]()
+    
+    for file in files {
+        //dir is also special executable
+        guard file.hasDirectoryPath == false else { continue }
+        if fm.isExecutableFile(atPath: file.path) {
+            executables.append(file.lastPathComponent)
+        }
+    }
+    return executables
+}
+
+/*
+ Write a function that accepts a path to a directory, then converts to PNGs any JPEGs it finds in there, leaving the originals intact. If any JPEG can’t be converted the function should just quietly continue.
+ */
+func challenge35(in directory: String) {
+    
 }

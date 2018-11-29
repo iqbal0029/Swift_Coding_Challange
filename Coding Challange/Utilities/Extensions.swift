@@ -23,3 +23,10 @@ extension BinaryInteger {
         return String(self, radix: 2).reduce(0) { $1 == "1" ? $0 + 1 : $0 }
     }
 }
+
+extension Array {
+    subscript(safe index: Int) -> Element? {
+        guard self.count < index else { return nil }
+        return self[index]
+    }
+}

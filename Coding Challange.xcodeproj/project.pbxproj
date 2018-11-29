@@ -44,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AFDACCC21B03C5F00C2490C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F02D383321AFAA88009B2C20 /* TextFiles */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		F02D383321AFAA88009B2C20 /* TextFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,7 +100,7 @@
 				F0E18EAA21A26CFE00016795 /* AppDelegate.swift */,
 				F0E18EAC21A26CFE00016795 /* ViewController.swift */,
 				F02D383721AFFCEC009B2C20 /* Chapters */,
-				F02D383321AFAA88009B2C20 /* TextFiles */,
+				3AFDACCC21B03C5F00C2490C /* Resources */,
 				F03A270421AD057600141898 /* Utilities */,
 				F0E18EAE21A26CFF00016795 /* Assets.xcassets */,
 				F0E18EB021A26CFF00016795 /* Main.storyboard */,

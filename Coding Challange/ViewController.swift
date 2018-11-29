@@ -21,7 +21,10 @@ class ViewController: NSViewController {
         //challenge28(log: "Secret Message", to: "CodingChallange.log")
         //print(challenge30(in: "/Users/faisal.ikwal/Desktop/Screen_shot"))
        // print(challenge31(source: "/Users/faisal.ikwal/Desktop/Screen_shot/SSH.pngg", destination: "/Users/faisal.ikwal/Documents/SSH.png"))
-        print(challenge32(filename: "Sample1.rtf", count: "Julius"))
+        //print(challenge32(filename: "Sample1.rtf", count: "Julius"))
+        //print(challenge33(in: "/Users/faisal/Desktop/ScreenShot"))
+        print(challenge34(in: "/Users/faisal/Desktop/ScreenShot"))
+
     }
     
     //MARK: Chapter 2 Numbers
