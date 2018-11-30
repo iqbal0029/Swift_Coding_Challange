@@ -17,13 +17,17 @@ class ViewController: NSViewController {
     
     //MARK: Chapter 3 Files
     func filesCodingChallage() {
-        //challenge27(filename: "Sample1.rtf", lineCount: 5)
         //challenge28(log: "Secret Message", to: "CodingChallange.log")
         //print(challenge30(in: "/Users/faisal.ikwal/Desktop/Screen_shot"))
        // print(challenge31(source: "/Users/faisal.ikwal/Desktop/Screen_shot/SSH.pngg", destination: "/Users/faisal.ikwal/Documents/SSH.png"))
-        //print(challenge32(filename: "Sample1.rtf", count: "Julius"))
         //print(challenge33(in: "/Users/faisal/Desktop/ScreenShot"))
-        print(challenge34(in: "/Users/faisal/Desktop/ScreenShot"))
+        //print(challenge34(in: "/Users/faisal/Desktop/ScreenShot"))
+        //challenge35(in: "/Users/faisal.ikwal/Desktop/Image")
+        if let fileURL = Bundle.urlFor(filename: "Sample.txt") {
+            challenge27(filePath: fileURL.path, lineCount: 5)
+            print(challenge32(filePath: fileURL.path, count: "Julius"))
+            print(challenge36(filePath: fileURL.path))
+        }
 
     }
     

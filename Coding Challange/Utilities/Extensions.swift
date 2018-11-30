@@ -18,6 +18,19 @@ extension String {
     }
 }
 
+extension Bundle {
+    static func urlFor(filename: String) -> URL? {
+        let pathArray = filename.components(separatedBy: ".")
+        return Bundle.main.url(forResource: pathArray[safe: 0] ?? "", withExtension: pathArray[safe: 1] ?? "")
+    }
+}
+
+extension FileManager {
+    static var documentDirectory: URL {
+        return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+    }
+}
+
 extension BinaryInteger {
     var onesCount: Int {
         return String(self, radix: 2).reduce(0) { $1 == "1" ? $0 + 1 : $0 }

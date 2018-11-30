@@ -1,9 +1,11 @@
 Antony And Cleopatra
 Coriolanus
 Cymbeline
-Hamlet
+Julius Hamlet
+[ERROR] Unexpected error
 Julius Caesar
 King Lear
 Macbeth
 Othello
 Twelfth Night
+[ERROR] Index out of bound

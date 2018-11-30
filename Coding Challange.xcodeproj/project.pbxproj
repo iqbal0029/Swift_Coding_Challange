@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F02D383521AFAADB009B2C20 /* Sample1.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F02D383421AFAADB009B2C20 /* Sample1.rtf */; };
+		F024203221B0FFB500384933 /* brandenburg_germany_nature_217279.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F024202C21B0FFB500384933 /* brandenburg_germany_nature_217279.jpg */; };
+		F024203321B0FFB500384933 /* canoe_water_nature_221611.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F024202D21B0FFB500384933 /* canoe_water_nature_221611.jpg */; };
+		F024203421B0FFB500384933 /* geranium_but_red_nature_217923.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F024202E21B0FFB500384933 /* geranium_but_red_nature_217923.jpg */; };
+		F024203521B0FFB500384933 /* goose_nature_water_bird_219670.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F024202F21B0FFB500384933 /* goose_nature_water_bird_219670.jpg */; };
+		F024203621B0FFB500384933 /* nature_flower_sky_218344.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F024203021B0FFB500384933 /* nature_flower_sky_218344.jpg */; };
+		F024203721B0FFB500384933 /* water_waterfall_nature_214751.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F024203121B0FFB500384933 /* water_waterfall_nature_214751.jpg */; };
+		F024203921B10F1400384933 /* ChunkedFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F024203821B10F1400384933 /* ChunkedFileReader.swift */; };
+		F024203B21B1113600384933 /* Sample.txt in Resources */ = {isa = PBXBuildFile; fileRef = F024203A21B1113600384933 /* Sample.txt */; };
 		F03A270121AD03F300141898 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03A270021AD03F300141898 /* Strings.swift */; };
 		F03A270321AD055700141898 /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03A270221AD055700141898 /* Numbers.swift */; };
 		F03A270621AD64C800141898 /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03A270521AD64C800141898 /* Files.swift */; };
@@ -19,7 +26,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F02D383421AFAADB009B2C20 /* Sample1.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Sample1.rtf; sourceTree = "<group>"; };
+		F024202C21B0FFB500384933 /* brandenburg_germany_nature_217279.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brandenburg_germany_nature_217279.jpg; sourceTree = "<group>"; };
+		F024202D21B0FFB500384933 /* canoe_water_nature_221611.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = canoe_water_nature_221611.jpg; sourceTree = "<group>"; };
+		F024202E21B0FFB500384933 /* geranium_but_red_nature_217923.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = geranium_but_red_nature_217923.jpg; sourceTree = "<group>"; };
+		F024202F21B0FFB500384933 /* goose_nature_water_bird_219670.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = goose_nature_water_bird_219670.jpg; sourceTree = "<group>"; };
+		F024203021B0FFB500384933 /* nature_flower_sky_218344.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nature_flower_sky_218344.jpg; sourceTree = "<group>"; };
+		F024203121B0FFB500384933 /* water_waterfall_nature_214751.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = water_waterfall_nature_214751.jpg; sourceTree = "<group>"; };
+		F024203821B10F1400384933 /* ChunkedFileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChunkedFileReader.swift; sourceTree = "<group>"; };
+		F024203A21B1113600384933 /* Sample.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Sample.txt; sourceTree = "<group>"; };
 		F03A270021AD03F300141898 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		F03A270221AD055700141898 /* Numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
 		F03A270521AD64C800141898 /* Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
@@ -47,15 +61,29 @@
 		3AFDACCC21B03C5F00C2490C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F024202B21B0FFB500384933 /* Image */,
 				F02D383321AFAA88009B2C20 /* TextFiles */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		F024202B21B0FFB500384933 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				F024202C21B0FFB500384933 /* brandenburg_germany_nature_217279.jpg */,
+				F024202D21B0FFB500384933 /* canoe_water_nature_221611.jpg */,
+				F024202E21B0FFB500384933 /* geranium_but_red_nature_217923.jpg */,
+				F024202F21B0FFB500384933 /* goose_nature_water_bird_219670.jpg */,
+				F024203021B0FFB500384933 /* nature_flower_sky_218344.jpg */,
+				F024203121B0FFB500384933 /* water_waterfall_nature_214751.jpg */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		F02D383321AFAA88009B2C20 /* TextFiles */ = {
 			isa = PBXGroup;
 			children = (
-				F02D383421AFAADB009B2C20 /* Sample1.rtf */,
+				F024203A21B1113600384933 /* Sample.txt */,
 			);
 			path = TextFiles;
 			sourceTree = "<group>";
@@ -74,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				F0B38B6421A411AF009D1A0C /* Extensions.swift */,
+				F024203821B10F1400384933 /* ChunkedFileReader.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -169,8 +198,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0E18EAF21A26CFF00016795 /* Assets.xcassets in Resources */,
+				F024203221B0FFB500384933 /* brandenburg_germany_nature_217279.jpg in Resources */,
+				F024203321B0FFB500384933 /* canoe_water_nature_221611.jpg in Resources */,
+				F024203621B0FFB500384933 /* nature_flower_sky_218344.jpg in Resources */,
 				F0E18EB221A26CFF00016795 /* Main.storyboard in Resources */,
-				F02D383521AFAADB009B2C20 /* Sample1.rtf in Resources */,
+				F024203521B0FFB500384933 /* goose_nature_water_bird_219670.jpg in Resources */,
+				F024203721B0FFB500384933 /* water_waterfall_nature_214751.jpg in Resources */,
+				F024203421B0FFB500384933 /* geranium_but_red_nature_217923.jpg in Resources */,
+				F024203B21B1113600384933 /* Sample.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +219,7 @@
 				F0E18EAD21A26CFE00016795 /* ViewController.swift in Sources */,
 				F0B38B6521A411AF009D1A0C /* Extensions.swift in Sources */,
 				F03A270321AD055700141898 /* Numbers.swift in Sources */,
+				F024203921B10F1400384933 /* ChunkedFileReader.swift in Sources */,
 				F03A270121AD03F300141898 /* Strings.swift in Sources */,
 				F0E18EAB21A26CFE00016795 /* AppDelegate.swift in Sources */,
 				F03A270621AD64C800141898 /* Files.swift in Sources */,

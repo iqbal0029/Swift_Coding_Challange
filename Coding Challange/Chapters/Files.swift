@@ -7,24 +7,15 @@
 //
 
 import Foundation
-
-func bundleUrlFor(filename: String) -> URL? {
-    let pathArray = filename.components(separatedBy: ".")
-    return Bundle.main.url(forResource: pathArray[0], withExtension: pathArray[safe: 1] ?? "")
-}
-
-var documentsFolderURL: URL {
-    return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-}
+import AppKit
 
 /*
  Write a function that accepts a filename on disk, then prints its last N lines in reverse order, all
  on a single line separated by commas.
  */
-func challenge27(filename: String, lineCount: Int) {
+func challenge27(filePath: String, lineCount: Int) {
     guard
         lineCount > 0,
-        let filePath = bundleUrlFor(filename: filename)?.path,
         let contents = try? String(contentsOfFile: filePath) else { return }
     let textArray = contents.components(separatedBy: "\n").reversed()
     var count = min(lineCount, textArray.count)
@@ -40,7 +31,7 @@ func challenge27(filename: String, lineCount: Int) {
  Tip: It’s important that you add line breaks along with each message, otherwise the log will just become jumbled.
  */
 func challenge28(log message: String, to logFile: String) {
-    let logFolderURL = documentsFolderURL.appendingPathComponent("Log", isDirectory: true)
+    let logFolderURL = FileManager.documentDirectory.appendingPathComponent("Log", isDirectory: true)
     let _ = try? FileManager.default.createDirectory(at: logFolderURL, withIntermediateDirectories: true)
     let logFileURL = logFolderURL.appendingPathComponent(logFile, isDirectory: false)
     var existingLog = (try? String(contentsOfFile: logFileURL.path)) ?? ""
@@ -110,11 +101,9 @@ func challenge31(source: String, destination: String) -> Bool {
 /*
  Write a function that accepts a filename on disk, loads it into a string, then returns the frequency of a word in that string, taking letter case into account. How you define “word” is worth considering carefully.
  */
-func challenge32(filename: String, count: String) -> Int {
+func challenge32(filePath: String, count: String) -> Int {
     //MARK: Recap
-    guard
-        let filePath = bundleUrlFor(filename: filename)?.path,
-        let contents = try? String(contentsOfFile: filePath) else { return 0 }
+    guard let contents = try? String(contentsOfFile: filePath) else { return 0 }
     var characterSet = CharacterSet.letters.inverted //all except letter
     characterSet.remove("'")
     //let wordArray = contents.components(separatedBy: .whitespacesAndNewlines)
@@ -167,5 +156,33 @@ func challenge34(in directory: String) -> [String] {
  Write a function that accepts a path to a directory, then converts to PNGs any JPEGs it finds in there, leaving the originals intact. If any JPEG can’t be converted the function should just quietly continue.
  */
 func challenge35(in directory: String) {
-    
+    let fm = FileManager.default
+    let dirURL = URL(fileURLWithPath: directory)
+    guard let files = try? fm.contentsOfDirectory(at: dirURL, includingPropertiesForKeys: nil) else {
+        return
+    }
+    for file in files {
+        guard file.pathExtension == "jpg" || file.pathExtension == "jpeg" else { continue }
+        guard let image = NSImage(contentsOf: file) else { continue }
+        guard let tiffData = image.tiffRepresentation else { continue }
+        guard let imageRep = NSBitmapImageRep(data: tiffData) else { continue }
+        guard let png = imageRep.representation(using: .png, properties: [:]) else { continue }
+        let newFileName = file.deletingPathExtension().appendingPathExtension("png")
+        _ = try? png.write(to: newFileName)
+    }
+}
+
+/*
+ Write a function that accepts accepts a path to a log file on disk, and returns how many lines
+ start with “[ERROR]”. The log file could be as large as 10GB, but may also not exist.
+ */
+func challenge36(filePath: String) -> Int {
+    var errorCount = 0
+    let fileReader = ChunkedFileReader(path: filePath)
+    while let line = fileReader.readLine() {
+        if line.hasPrefix("[ERROR]") {
+            errorCount += 1
+        }
+    }
+    return errorCount
 }
