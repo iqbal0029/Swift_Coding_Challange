@@ -12,11 +12,30 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        filesCodingChallage()
+        collectionsChallenge()
     }
-    
+
+    //MARK: Chapter 4 Collections
+    func collectionsChallenge() {
+        //print(challenge37(array: [5, 15, 55, 515], count: "1"))
+        //print(challenge38(array: [5, 155, 55, 515], count: 35))
+        //print(challenge39(array: ["a", "abc", "ab"]))
+        /*var testArray = Array(1...100)
+        testArray.remove(at: 25)
+        testArray.remove(at: 20)
+        testArray.remove(at: 6)
+        print(challenge40(array: testArray))*/
+        //print(challenge41(array: [1, 3, 5, 7, 9]))
+        //print(challenge42(array: [1, 3, 5, 7, 9], item: 10))
+        //challenge43()
+        //challenge44()
+        //challenge45()
+        //challenge46()
+        challenge47()
+    }
+
     //MARK: Chapter 3 Files
-    func filesCodingChallage() {
+    func filesCodingChallenge() {
         //challenge28(log: "Secret Message", to: "CodingChallange.log")
         //print(challenge30(in: "/Users/faisal.ikwal/Desktop/Screen_shot"))
        // print(challenge31(source: "/Users/faisal.ikwal/Desktop/Screen_shot/SSH.pngg", destination: "/Users/faisal.ikwal/Documents/SSH.png"))
@@ -32,7 +51,7 @@ class ViewController: NSViewController {
     }
     
     //MARK: Chapter 2 Numbers
-    func numbersCodingChallage() {
+    func numbersCodingChallenge() {
         //challenge16()
         //print(challenge17(min: 10, max:15))
         //print(challenge18(number: 2, power: 4))
@@ -49,7 +68,7 @@ class ViewController: NSViewController {
     }
     
     //MARK: Chapter 1 Strings
-    func stringsCodingChallage() {
+    func stringsCodingChallenge() {
         /*assert(challenge1(input: "No duplicates") == true, "Challenge 1 failed")
          assert(challenge1(input: "abcdefghijklmnopqrstuvwxyz") == true,
          "Challenge 1 failed")
