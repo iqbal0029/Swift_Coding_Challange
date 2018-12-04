@@ -141,5 +141,64 @@ func challenge46() {
  */
 func challenge47() {
     let result = [-1, 1, 2, 3].myMin()
-    print(result)
+    print(result!)
+}
+
+/*
+Create a new data type that models a double-ended queue using generics, or deque. You should be able to push items to the front or back, pop them from the front or back, and get the number of items.
+ */
+func challenge48() {
+    var numbers = Deque<Int>()
+    numbers.pushBack(5)
+    numbers.pushBack(8)
+    numbers.pushBack(3)
+    assert(numbers.count == 3)
+    assert(numbers.popFront()! == 5)
+    assert(numbers.popBack()! == 3)
+    assert(numbers.popFront()! == 8)
+    assert(numbers.popBack() == nil)
+}
+
+/*
+ Write a function that accepts a variadic array of integers and return the sum of all numbers that appear an even number of times.
+ */
+func challenge49(numbers: Int...) -> Int {
+    let countedSet = NSCountedSet(array: numbers)
+    var sum = 0
+    for case let item as Int in countedSet {
+        guard countedSet.count(for: item) % 2 == 0 else {
+            continue
+        }
+        sum += item
+    }
+    return sum
+}
+
+/*
+ 
+ Write a function that accepts an array of positive and negative numbers and returns a closed range containing the position of the contiguous positive numbers that sum to the highest value, or nil if nothing were found.
+ */
+//TODO: Recap
+func challenge50(_ input: [Int]) -> CountableClosedRange<Int>? {
+    guard !input.isEmpty else { return nil }
+    var range: CountableClosedRange<Int>?
+    
+    var startIndex: Int? = 0
+    var currentSum = 0
+    var bestSum = 0
+    
+    for (index, element) in input.enumerated() {
+        if element > 0 {
+            currentSum += element
+            startIndex = startIndex ?? index
+            if currentSum > bestSum {
+                bestSum = currentSum
+                range = startIndex!...index
+            }
+        } else {
+            currentSum = 0
+            startIndex = nil
+        }
+    }
+    return range
 }

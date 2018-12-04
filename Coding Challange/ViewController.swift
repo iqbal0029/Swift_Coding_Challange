@@ -29,9 +29,12 @@ class ViewController: NSViewController {
         //print(challenge42(array: [1, 3, 5, 7, 9], item: 10))
         //challenge43()
         //challenge44()
-        //challenge45()
+        //challenge45()//TODO
         //challenge46()
-        challenge47()
+        //challenge47()
+        //challenge48()
+        //print(challenge49(numbers: 1, 2, 2, 3, 3))
+        print(challenge50([10, 20, 30, -10, -20, 10, 20]))
     }
 
     //MARK: Chapter 3 Files
