@@ -191,7 +191,7 @@ func challenge50(_ input: [Int]) -> CountableClosedRange<Int>? {
         if element > 0 {
             currentSum += element
             startIndex = startIndex ?? index
-            if currentSum > bestSum {
+            if currentSum > bestSum {
                 bestSum = currentSum
                 range = startIndex!...index
             }
