@@ -18,14 +18,6 @@ class LinkedListNode<T> {
 class LinkedList<T> {
     var start: LinkedListNode<T>?
 
-    func printNodes() {
-        var currentNode = start
-        while let node = currentNode {
-            print(node.value, terminator: " ")
-            currentNode = node.nextNode
-        }
-    }
-
     var center: LinkedListNode<T>? {
         var slow = start
         var fast = start
@@ -35,4 +27,36 @@ class LinkedList<T> {
         }
         return slow
     }
+
+    func reversed() -> LinkedList {
+        return self
+    }
+    
+
+}
+
+extension LinkedList {
+    static func from<A: Collection>(items: A) -> LinkedList<T> where A.Element == T {
+        let list = LinkedList<T>()
+        var lastNode: LinkedListNode<T>? = nil
+        for element in items {
+            let node = LinkedListNode(value: element)
+            if let last = lastNode {
+                last.nextNode = node
+            } else {
+                list.start = node
+            }
+            lastNode = node
+        }
+        return list
+    }
+
+    func printNodes() {
+        var currentNode = start
+        while let node = currentNode {
+            print(node.value, terminator: " ")
+            currentNode = node.nextNode
+        }
+    }
+
 }

@@ -34,7 +34,8 @@ class ViewController: NSViewController {
         //challenge47()
         //challenge48()
         //print(challenge49(numbers: 1, 2, 2, 3, 3))
-        print(challenge50([10, 20, 30, -10, -20, 10, 20]))
+        //print(challenge50([10, 20, 30, -10, -20, 10, 20]))
+        challenge51()
     }
 
     //MARK: Chapter 3 Files

@@ -90,17 +90,7 @@ func challenge42<T: Equatable>(array: [T], item: T) -> Int? {
 
  */
 func challenge43() {
-    let list = LinkedList<Character>()
-    var lastNode: LinkedListNode<Character>? = nil
-    for char in "abcdefghijklmnopqrstuvwxyz" {
-        let node = LinkedListNode(value: char)
-        if let last = lastNode {
-            last.nextNode = node
-        } else {
-            list.start = node
-        }
-        lastNode = node
-    }
+    let list = LinkedList.from(items: "abcdefghijklmnopqrstuvwxyz")
     list.printNodes()
 }
 
@@ -108,17 +98,7 @@ func challenge43() {
  Center of linkedlist
  */
 func challenge44() {
-    let list = LinkedList<Int>()
-    var lastNode: LinkedListNode<Int>? = nil
-    for element in [1, 3, 5, 7, 9] {
-        let node = LinkedListNode(value: element)
-        if let last = lastNode {
-            last.nextNode = node
-        } else {
-            list.start = node
-        }
-        lastNode = node
-    }
+    let list = LinkedList.from(items: [1, 3, 5, 7, 9])
     print(list.center?.value ?? "")
 }
 
@@ -179,6 +159,8 @@ func challenge49(numbers: Int...) -> Int {
  Write a function that accepts an array of positive and negative numbers and returns a closed range containing the position of the contiguous positive numbers that sum to the highest value, or nil if nothing were found.
  */
 //TODO: Recap
+//Range 0.1..<0.4 - ClosedRange 0.1...0.4 include upper bound
+//CountableRange 0..<4 - CoutableClosedRange 0...4 known Step value ie 1
 func challenge50(_ input: [Int]) -> CountableClosedRange<Int>? {
     guard !input.isEmpty else { return nil }
     var range: CountableClosedRange<Int>?
@@ -201,4 +183,14 @@ func challenge50(_ input: [Int]) -> CountableClosedRange<Int>? {
         }
     }
     return range
+}
+
+/*
+ Expand your code from challenge 43 so that it has a reversed() method that returns a copy
+ of itself in reverse.
+ */
+func challenge51() {
+    let list = LinkedList.from(items: [1, 2, 3, 4])
+    let reversedList = list.reversed()
+    reversedList.printNodes()
 }
