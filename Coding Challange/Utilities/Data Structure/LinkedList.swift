@@ -18,6 +18,30 @@ class LinkedListNode<T> {
 class LinkedList<T> {
     var start: LinkedListNode<T>?
 
+    convenience init<A: Collection>(_ items: A) where A.Element == T {
+        self.init()
+        var lastNode: LinkedListNode<T>? = nil
+        for element in items {
+            let node = LinkedListNode(value: element)
+            if let last = lastNode {
+                last.nextNode = node
+            } else {
+                self.start = node
+            }
+            lastNode = node
+        }
+    }
+    
+    subscript(_ index: Int) -> LinkedListNode<T>? {
+        var index = index
+        var node = self.start
+        while index != 0 && node != nil  {
+            node = node?.nextNode
+            index -= 1
+        }
+        return node
+    }
+    
     var center: LinkedListNode<T>? {
         var slow = start
         var fast = start
@@ -32,25 +56,22 @@ class LinkedList<T> {
         return self
     }
     
+    var containLoop: Bool {
+        var slow = self.start
+        var fast = self.start
+        while slow != nil && fast != nil {
+            slow = slow?.nextNode
+            fast = fast?.nextNode?.nextNode
+            if fast?.nextNode === slow {
+                return true
+            }
+        }
+        return false
+    }
 
 }
 
 extension LinkedList {
-    static func from<A: Collection>(items: A) -> LinkedList<T> where A.Element == T {
-        let list = LinkedList<T>()
-        var lastNode: LinkedListNode<T>? = nil
-        for element in items {
-            let node = LinkedListNode(value: element)
-            if let last = lastNode {
-                last.nextNode = node
-            } else {
-                list.start = node
-            }
-            lastNode = node
-        }
-        return list
-    }
-
     func printNodes() {
         var currentNode = start
         while let node = currentNode {

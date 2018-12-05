@@ -90,7 +90,7 @@ func challenge42<T: Equatable>(array: [T], item: T) -> Int? {
 
  */
 func challenge43() {
-    let list = LinkedList.from(items: "abcdefghijklmnopqrstuvwxyz")
+    let list = LinkedList("abcdefghijklmnopqrstuvwxyz")
     list.printNodes()
 }
 
@@ -98,7 +98,7 @@ func challenge43() {
  Center of linkedlist
  */
 func challenge44() {
-    let list = LinkedList.from(items: [1, 3, 5, 7, 9])
+    let list = LinkedList([1, 3, 5, 7, 9])
     print(list.center?.value ?? "")
 }
 
@@ -190,7 +190,9 @@ func challenge50(_ input: [Int]) -> CountableClosedRange<Int>? {
  of itself in reverse.
  */
 func challenge51() {
-    let list = LinkedList.from(items: [1, 2, 3, 4])
+    let list = LinkedList([1, 2, 3, 4])
+    list[0]?.nextNode = list.start
+    print(list.containLoop)
     let reversedList = list.reversed()
-    reversedList.printNodes()
+    //reversedList.printNodes()
 }
