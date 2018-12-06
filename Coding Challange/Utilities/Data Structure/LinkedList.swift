@@ -18,6 +18,11 @@ class LinkedListNode<T> {
 class LinkedList<T> {
     var start: LinkedListNode<T>?
 
+    convenience init(_ head: LinkedListNode<T>) {
+        self.init()
+        self.start = head
+    }
+    
     convenience init<A: Collection>(_ items: A) where A.Element == T {
         self.init()
         var lastNode: LinkedListNode<T>? = nil
@@ -52,8 +57,34 @@ class LinkedList<T> {
         return slow
     }
 
-    func reversed() -> LinkedList {
-        return self
+    func reverse() {
+        guard var curr = self.start else { return }
+        var prev: LinkedListNode<T>? = nil
+        while let next = curr.nextNode {
+            curr.nextNode = prev
+            prev = curr
+            curr = next
+        }
+        curr.nextNode = prev
+        start = curr
+    }
+    
+    func reversed() -> LinkedList<T> {
+        let copied = self.copy()
+        copied.reverse()
+        return copied
+    }
+    
+    func copy() -> LinkedList<T> {
+        guard var orig = self.start else { return LinkedList() }
+        let copiedNode = LinkedListNode(value: orig.value)
+        var currCopiedNode = copiedNode
+        while let next = orig.nextNode {
+            currCopiedNode.nextNode = LinkedListNode(value: next.value)
+            orig = next
+            currCopiedNode = currCopiedNode.nextNode!
+        }
+        return LinkedList(copiedNode)
     }
     
     var containLoop: Bool {
@@ -75,9 +106,10 @@ extension LinkedList {
     func printNodes() {
         var currentNode = start
         while let node = currentNode {
-            print(node.value, terminator: " ")
+            print(node.value, terminator: "->")
             currentNode = node.nextNode
         }
+        print("nil")
     }
 
 }

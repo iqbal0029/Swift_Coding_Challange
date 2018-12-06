@@ -191,8 +191,22 @@ func challenge50(_ input: [Int]) -> CountableClosedRange<Int>? {
  */
 func challenge51() {
     let list = LinkedList([1, 2, 3, 4])
-    list[0]?.nextNode = list.start
+    list.reversed().printNodes()
+    list.printNodes()
+}
+
+/*
+ Write one function that sums an array of numbers. The array might contain all integers, all doubles, or all floats.
+ */
+func challenge52<T: Numeric>(_ items: [T]) -> T {
+    return items.reduce(T(exactly: 0)!, +)
+}
+
+/*
+ Linked lists with a loop
+ */
+func challenge53() {
+    let list = LinkedList([1, 2, 3, 4])
+    list[3]?.nextNode = list.start //created loop
     print(list.containLoop)
-    let reversedList = list.reversed()
-    //reversedList.printNodes()
 }
