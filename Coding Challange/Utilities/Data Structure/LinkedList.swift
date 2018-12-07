@@ -18,13 +18,12 @@ class LinkedListNode<T> {
 class LinkedList<T> {
     var start: LinkedListNode<T>?
 
-    convenience init(_ head: LinkedListNode<T>) {
-        self.init()
+    init(_ head: LinkedListNode<T>?) {
         self.start = head
     }
     
     convenience init<A: Collection>(_ items: A) where A.Element == T {
-        self.init()
+        self.init(nil)
         var lastNode: LinkedListNode<T>? = nil
         for element in items {
             let node = LinkedListNode(value: element)
@@ -76,7 +75,7 @@ class LinkedList<T> {
     }
     
     func copy() -> LinkedList<T> {
-        guard var orig = self.start else { return LinkedList() }
+        guard var orig = self.start else { return LinkedList(nil) }
         let copiedNode = LinkedListNode(value: orig.value)
         var currCopiedNode = copiedNode
         while let next = orig.nextNode {
