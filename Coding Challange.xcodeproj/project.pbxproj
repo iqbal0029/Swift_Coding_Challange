@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A3B26B721BCEC470087FF02 /* BST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B26B621BCEC470087FF02 /* BST.swift */; };
 		3A7856E321B6D1D600AE3F59 /* Deque.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7856E221B6D1D600AE3F59 /* Deque.swift */; };
 		F024203221B0FFB500384933 /* brandenburg_germany_nature_217279.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F024202C21B0FFB500384933 /* brandenburg_germany_nature_217279.jpg */; };
 		F024203321B0FFB500384933 /* canoe_water_nature_221611.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F024202D21B0FFB500384933 /* canoe_water_nature_221611.jpg */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A3B26B621BCEC470087FF02 /* BST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BST.swift; sourceTree = "<group>"; };
 		3A7856E221B6D1D600AE3F59 /* Deque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deque.swift; sourceTree = "<group>"; };
 		F024202C21B0FFB500384933 /* brandenburg_germany_nature_217279.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brandenburg_germany_nature_217279.jpg; sourceTree = "<group>"; };
 		F024202D21B0FFB500384933 /* canoe_water_nature_221611.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = canoe_water_nature_221611.jpg; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			children = (
 				F0C7B47E21B52EAD007C761F /* LinkedList.swift */,
 				3A7856E221B6D1D600AE3F59 /* Deque.swift */,
+				3A3B26B621BCEC470087FF02 /* BST.swift */,
 			);
 			path = "Data Structure";
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				F03A270121AD03F300141898 /* Strings.swift in Sources */,
 				F0E18EAB21A26CFE00016795 /* AppDelegate.swift in Sources */,
 				3A7856E321B6D1D600AE3F59 /* Deque.swift in Sources */,
+				3A3B26B721BCEC470087FF02 /* BST.swift in Sources */,
 				F03A270621AD64C800141898 /* Files.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

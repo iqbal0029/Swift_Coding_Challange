@@ -106,6 +106,8 @@ func challenge44() {
  Write a new method for your binary search tree that traverses the tree in order, running a closure on each node.
  */
 func challenge45() {
+    let bst = BinarySearchTree(array: [1, 3, 7, 9, 8, 2, 6])
+    bst.root?.traverse { print($0.value, terminator: " ") }
 }
 
 /*
@@ -210,3 +212,9 @@ func challenge53() {
     list[3]?.nextNode = list.start //created loop
     print(list.containLoop)
 }
+
+func challenge54() {
+    let bst = BinarySearchTree(array: [10, 5, 4, 3, 2, 1, 11, 12, 13, 14, 15])
+    print(bst.isBalanced)
+}
+

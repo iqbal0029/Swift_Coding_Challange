@@ -37,7 +37,9 @@ class ViewController: NSViewController {
         //print(challenge50([10, 20, 30, -10, -20, 10, 20]))
         //challenge51()
         //print(challenge52(Array<Float>([1.0, 2.0, 3.0])))
-        challenge53()
+        //challenge53()
+        challenge54()
+
     }
 
     //MARK: Chapter 3 Files
