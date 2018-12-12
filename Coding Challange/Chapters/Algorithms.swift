@@ -61,6 +61,21 @@ func challenge57(first firstValue: Any, second secondValue: Any) -> Bool {
     return true
 }
 
+/*
+ Write a function that accepts a string containing the characters (, [, {, <, >, }, ], and ) in any arrangement and frequency. It should return true if the brackets are opened and closed in the correct order, and if all brackets are closed. Any other input should false.
+ Sample input and output
+ • The string “()” should return true.
+ • The string “([])” should return true.
+ • The string “([])(<{}>)” should return true.
+ • The string “([]{}<[{}]>)” should return true.
+ • The string “” should return true.
+ • The string “}{” should return false.
+ • The string “([)]” should return false.
+ • The string “([)” should return false.
+ • The string “([” should return false.
+ • The string “[<<<{}>>]” should return false.
+ • The string “hello” should return false.
+ */
 func challenge58(input: String) -> Bool {
     return true
 }
