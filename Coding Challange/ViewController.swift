@@ -17,7 +17,10 @@ class ViewController: NSViewController {
 
     //MARK: Chapter 5 Algorithms
     func algorithmsChallenge() {
-        challenge55()
+        //challenge55()
+        //challenge56()
+        //print(challenge57(first: 3.14159, second: 2.03048))
+        print(challenge58(input: "([])(<{}>)"))
     }
 
     //MARK: Chapter 4 Collections
