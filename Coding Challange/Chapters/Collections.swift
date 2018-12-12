@@ -214,7 +214,7 @@ func challenge53() {
 }
 
 func challenge54() {
-    let bst = BinarySearchTree(array: [10, 5, 4, 3, 2, 1, 11, 12, 13, 14, 15])
-    print(bst.isBalanced)
+    let bst = BinarySearchTree(array: [1, 2, 3, 4])
+    print(bst.isBalanced())
 }
 

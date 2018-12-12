@@ -22,6 +22,10 @@ class Node<T> {
         body(self)
         right?.traverse(body)
     }
+
+    var isLeaf: Bool {
+        return left != nil && right != nil
+    }
 }
 
 class BinarySearchTree<T: Comparable> {
@@ -52,9 +56,37 @@ class BinarySearchTree<T: Comparable> {
 
         }
     }
-    
-    var isBalanced: Bool {
-        return false
+
+    private func height(node: Node<T>?) -> Int {
+        guard node != nil else { return 0 }
+        return max(height(node: node?.left), height(node: node?.right)) + 1
+    }
+
+    func height() -> Int {
+        return height(node: root)
+    }
+    /*
+     Consider a height-balancing scheme where following conditions should be checked to determine if a binary tree is balanced.
+     An empty tree is height-balanced. A non-empty binary tree T is balanced if:
+     1) Left subtree of T is balanced
+     2) Right subtree of T is balanced
+     3) The difference between heights of left subtree and right subtree is not more than 1.
+     */
+    private func isBalanced(node: Node<T>?) -> Bool {
+        guard let node = node else { return true }
+
+        let leftHeight = height(node: node.left)
+        let rightHeight = height(node: node.right)
+
+        return
+            abs(leftHeight - rightHeight) <= 1
+            && isBalanced(node: node.left)
+            && isBalanced(node: node.right)
+
+    }
+
+    func isBalanced() -> Bool {
+        return isBalanced(node: root)
     }
     
     func inorderTraverse() -> String {
