@@ -28,6 +28,13 @@ class Node<T> {
     }
 }
 
+// A wrapper class used to modify height across
+// recursive calls.
+class Height
+{
+    var height: Int = 0
+}
+
 class BinarySearchTree<T: Comparable> {
     var root: Node<T>?
     
@@ -72,6 +79,7 @@ class BinarySearchTree<T: Comparable> {
      2) Right subtree of T is balanced
      3) The difference between heights of left subtree and right subtree is not more than 1.
      */
+    //O(n^2)
     private func isBalanced(node: Node<T>?) -> Bool {
         guard let node = node else { return true }
 
@@ -82,11 +90,36 @@ class BinarySearchTree<T: Comparable> {
             abs(leftHeight - rightHeight) <= 1
             && isBalanced(node: node.left)
             && isBalanced(node: node.right)
+    }
+
+    //O(n)
+    private func isBalancedLinear(_ node: Node<T>?, _ height: Height) -> Bool {
+        guard let node = node else {
+            /* If tree is empty then return true */
+            height.height = 0
+            return true
+        }
+
+        /* Get heights of left and right sub trees */
+        let leftHeight = Height()
+        let rightHeight = Height()
+        let isLeftBalanced = isBalancedLinear(node.left, leftHeight)
+        let isRightBalanced = isBalancedLinear(node.right, rightHeight);
+
+        /* Height of current node is max of heights of left and right subtrees plus 1*/
+        height.height = max(leftHeight.height, rightHeight.height) + 1
+
+        /* If difference between heights of left and right subtrees is less than or equal to 1 and left and right subtrees are balanced then return true */
+        return
+            abs(leftHeight.height - rightHeight.height) <= 1
+            && isLeftBalanced && isRightBalanced
+
 
     }
 
     func isBalanced() -> Bool {
-        return isBalanced(node: root)
+        //return isBalanced(node: root)
+        return isBalancedLinear(root, Height())
     }
     
     func inorderTraverse() -> String {

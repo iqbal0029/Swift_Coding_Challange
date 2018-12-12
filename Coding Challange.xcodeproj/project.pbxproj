@@ -27,6 +27,7 @@
 		F0E18EAD21A26CFE00016795 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E18EAC21A26CFE00016795 /* ViewController.swift */; };
 		F0E18EAF21A26CFF00016795 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E18EAE21A26CFF00016795 /* Assets.xcassets */; };
 		F0E18EB221A26CFF00016795 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E18EB021A26CFF00016795 /* Main.storyboard */; };
+		F0E8E86E21C11B9800007045 /* Algorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E8E86D21C11B9800007045 /* Algorithms.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		F0E18EB121A26CFF00016795 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0E18EB321A26CFF00016795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0E18EB421A26CFF00016795 /* Coding_Challange.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Coding_Challange.entitlements; sourceTree = "<group>"; };
+		F0E8E86D21C11B9800007045 /* Algorithms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithms.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				F03A270221AD055700141898 /* Numbers.swift */,
 				F03A270521AD64C800141898 /* Files.swift */,
 				F024203C21B12AF200384933 /* Collections.swift */,
+				F0E8E86D21C11B9800007045 /* Algorithms.swift */,
 			);
 			path = Chapters;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				F0B38B6521A411AF009D1A0C /* Extensions.swift in Sources */,
 				F03A270321AD055700141898 /* Numbers.swift in Sources */,
 				F024203D21B12AF200384933 /* Collections.swift in Sources */,
+				F0E8E86E21C11B9800007045 /* Algorithms.swift in Sources */,
 				F024203921B10F1400384933 /* ChunkedFileReader.swift in Sources */,
 				F03A270121AD03F300141898 /* Strings.swift in Sources */,
 				F0E18EAB21A26CFE00016795 /* AppDelegate.swift in Sources */,

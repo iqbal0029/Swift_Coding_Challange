@@ -213,8 +213,12 @@ func challenge53() {
     print(list.containLoop)
 }
 
+/*
+ Create a binary search tree data structure that can be initialized from an unordered array of
+ comparable values, then write a method that returns whether the tree is balanced
+ */
 func challenge54() {
-    let bst = BinarySearchTree(array: [1, 2, 3, 4])
+    let bst = BinarySearchTree(array: [1, 2, -3, 4])
     print(bst.isBalanced())
 }
 

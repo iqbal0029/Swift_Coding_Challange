@@ -108,3 +108,31 @@ extension Collection {
         return result
     }
 }
+
+extension MutableCollection where Element: Comparable, Index == Int {
+    func bubbleSorted() -> Self {
+        guard count > 1 else { return self }
+        var result = self
+        /*for i in 0 ..< count-1 {
+            for j in 0 ..< count-i-1 {
+                if result[j] > result[j+1] {
+                    result.swapAt(j+1, j)
+                }
+            }
+        }
+        return result*/
+        var isSwapped = false
+        var sortedCount = 0
+        repeat {
+            isSwapped = false
+            for index in 1..<count-sortedCount {
+                if result[index-1] > result[index] {
+                    result.swapAt(index-1, index)
+                    isSwapped = true
+                }
+            }
+            sortedCount += 1
+        } while isSwapped
+        return result
+    }
+}

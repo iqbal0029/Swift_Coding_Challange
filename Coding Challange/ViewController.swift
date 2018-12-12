@@ -12,7 +12,12 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionsChallenge()
+        algorithmsChallenge()
+    }
+
+    //MARK: Chapter 5 Algorithms
+    func algorithmsChallenge() {
+        challenge55()
     }
 
     //MARK: Chapter 4 Collections
