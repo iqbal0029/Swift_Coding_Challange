@@ -23,6 +23,7 @@
 		F03A270621AD64C800141898 /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03A270521AD64C800141898 /* Files.swift */; };
 		F065588921C21092004A5AC7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F065588821C21092004A5AC7 /* README.md */; };
 		F065588B21C21BDC004A5AC7 /* TestChallanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = F065588A21C21BDC004A5AC7 /* TestChallanges.swift */; };
+		F065588D21C222B1004A5AC7 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F065588C21C222B1004A5AC7 /* logo.png */; };
 		F0B38B6521A411AF009D1A0C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B38B6421A411AF009D1A0C /* Extensions.swift */; };
 		F0C7B47F21B52EAD007C761F /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C7B47E21B52EAD007C761F /* LinkedList.swift */; };
 		F0E18EAB21A26CFE00016795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E18EAA21A26CFE00016795 /* AppDelegate.swift */; };
@@ -49,6 +50,7 @@
 		F03A270521AD64C800141898 /* Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
 		F065588821C21092004A5AC7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		F065588A21C21BDC004A5AC7 /* TestChallanges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestChallanges.swift; sourceTree = "<group>"; };
+		F065588C21C222B1004A5AC7 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		F0B38B6421A411AF009D1A0C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F0C7B47E21B52EAD007C761F /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		F0E18EA721A26CFE00016795 /* Coding Challange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coding Challange.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				F065588821C21092004A5AC7 /* README.md */,
+				F065588C21C222B1004A5AC7 /* logo.png */,
 				F0E18EA921A26CFE00016795 /* Coding Challange */,
 				F0E18EA821A26CFE00016795 /* Products */,
 			);
@@ -228,6 +231,7 @@
 			files = (
 				F0E18EAF21A26CFF00016795 /* Assets.xcassets in Resources */,
 				F024203221B0FFB500384933 /* brandenburg_germany_nature_217279.jpg in Resources */,
+				F065588D21C222B1004A5AC7 /* logo.png in Resources */,
 				F065588921C21092004A5AC7 /* README.md in Resources */,
 				F024203321B0FFB500384933 /* canoe_water_nature_221611.jpg in Resources */,
 				F024203621B0FFB500384933 /* nature_flower_sky_218344.jpg in Resources */,
