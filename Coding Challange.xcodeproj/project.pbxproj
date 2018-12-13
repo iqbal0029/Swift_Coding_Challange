@@ -21,6 +21,8 @@
 		F03A270121AD03F300141898 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03A270021AD03F300141898 /* Strings.swift */; };
 		F03A270321AD055700141898 /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03A270221AD055700141898 /* Numbers.swift */; };
 		F03A270621AD64C800141898 /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03A270521AD64C800141898 /* Files.swift */; };
+		F065588921C21092004A5AC7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F065588821C21092004A5AC7 /* README.md */; };
+		F065588B21C21BDC004A5AC7 /* TestChallanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = F065588A21C21BDC004A5AC7 /* TestChallanges.swift */; };
 		F0B38B6521A411AF009D1A0C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B38B6421A411AF009D1A0C /* Extensions.swift */; };
 		F0C7B47F21B52EAD007C761F /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C7B47E21B52EAD007C761F /* LinkedList.swift */; };
 		F0E18EAB21A26CFE00016795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E18EAA21A26CFE00016795 /* AppDelegate.swift */; };
@@ -45,6 +47,8 @@
 		F03A270021AD03F300141898 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		F03A270221AD055700141898 /* Numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
 		F03A270521AD64C800141898 /* Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
+		F065588821C21092004A5AC7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		F065588A21C21BDC004A5AC7 /* TestChallanges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestChallanges.swift; sourceTree = "<group>"; };
 		F0B38B6421A411AF009D1A0C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F0C7B47E21B52EAD007C761F /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		F0E18EA721A26CFE00016795 /* Coding Challange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coding Challange.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +137,7 @@
 		F0E18E9E21A26CFE00016795 = {
 			isa = PBXGroup;
 			children = (
+				F065588821C21092004A5AC7 /* README.md */,
 				F0E18EA921A26CFE00016795 /* Coding Challange */,
 				F0E18EA821A26CFE00016795 /* Products */,
 			);
@@ -151,6 +156,7 @@
 			children = (
 				F0E18EAA21A26CFE00016795 /* AppDelegate.swift */,
 				F0E18EAC21A26CFE00016795 /* ViewController.swift */,
+				F065588A21C21BDC004A5AC7 /* TestChallanges.swift */,
 				F02D383721AFFCEC009B2C20 /* Chapters */,
 				3AFDACCC21B03C5F00C2490C /* Resources */,
 				F03A270421AD057600141898 /* Utilities */,
@@ -222,6 +228,7 @@
 			files = (
 				F0E18EAF21A26CFF00016795 /* Assets.xcassets in Resources */,
 				F024203221B0FFB500384933 /* brandenburg_germany_nature_217279.jpg in Resources */,
+				F065588921C21092004A5AC7 /* README.md in Resources */,
 				F024203321B0FFB500384933 /* canoe_water_nature_221611.jpg in Resources */,
 				F024203621B0FFB500384933 /* nature_flower_sky_218344.jpg in Resources */,
 				F0E18EB221A26CFF00016795 /* Main.storyboard in Resources */,
@@ -249,6 +256,7 @@
 				F03A270121AD03F300141898 /* Strings.swift in Sources */,
 				F0E18EAB21A26CFE00016795 /* AppDelegate.swift in Sources */,
 				3A7856E321B6D1D600AE3F59 /* Deque.swift in Sources */,
+				F065588B21C21BDC004A5AC7 /* TestChallanges.swift in Sources */,
 				3A3B26B721BCEC470087FF02 /* BST.swift in Sources */,
 				F03A270621AD64C800141898 /* Files.swift in Sources */,
 			);

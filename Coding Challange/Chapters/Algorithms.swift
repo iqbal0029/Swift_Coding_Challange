@@ -77,5 +77,32 @@ func challenge57(first firstValue: Any, second secondValue: Any) -> Bool {
  • The string “hello” should return false.
  */
 func challenge58(input: String) -> Bool {
-    return true
+    let allowedCharacterSet = CharacterSet(charactersIn: "([{<>}])")
+    guard input.rangeOfCharacter(from: allowedCharacterSet.inverted) == nil else {
+        return false
+    }
+
+    let bracketPair: [Character: Character] = ["(": ")", "[": "]", "{": "}", "<": ">"]
+    var usedOpenBrackets = [Character]()
+
+    for currentChar in input {
+        if bracketPair.keys.contains(currentChar) { //Open Bracket
+            usedOpenBrackets.append(currentChar)
+        } else { //Closed Bracket
+            guard let lastOpenBracket = usedOpenBrackets.popLast() else {
+                return false
+            }
+            if bracketPair[lastOpenBracket] != currentChar {
+                return false
+            }
+        }
+    }
+    return usedOpenBrackets.count == 0
+}
+
+/*
+ Quick sort
+ */
+func challenge59() {
+    print([12, 5, 4, 9, 3, 2, 1].quickSorted())
 }

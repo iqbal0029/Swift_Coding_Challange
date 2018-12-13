@@ -149,4 +149,10 @@ extension Array where Element: Comparable {
         }
         return result
     }
+
+    func quickSorted() -> [Element] {
+        guard count > 1 else { return self }
+        var result = self
+        return result
+    }
 }
