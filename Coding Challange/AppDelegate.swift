@@ -12,7 +12,16 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        TestChallanges.algorithmsChallenge()
+        //TestChallanges.algorithmsChallenge()
+        /*let data: [Any?] = ["Bill", nil, 69, "Ted"]
+        for datum in data where datum is String? {
+            print(datum)
+        }
+        for case let .some(datum) in data where datum is String {
+            print(datum)
+        }*/
+        
+
     }
 }
 
