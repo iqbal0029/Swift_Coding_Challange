@@ -150,9 +150,32 @@ extension Array where Element: Comparable {
         return result
     }
 
+    //O(N^2)
     func quickSorted() -> [Element] {
         guard count > 1 else { return self }
-        var result = self
-        return result
+        let pivot = self[count/2]
+        let lesserThanPivot = filter { $0 < pivot }
+        let equalToPivot = filter { $0 == pivot }
+        let greaterThanPivot = filter { $0 > pivot }
+        return lesserThanPivot.quickSorted() + equalToPivot + greaterThanPivot.quickSorted()
+    }
+
+    mutating func qSort() {
+        self.quickSort(left: 0, right: count-1)
+    }
+
+    mutating func quickSort(left: Int, right: Int) {
+        guard left < right else { return }
+        let pivot = self[right]
+        var splitPoint = left
+        for i in left ..< right {
+            if self[i] < pivot {
+                swapAt(i, splitPoint)
+                splitPoint += 1
+            }
+        }
+        swapAt(right, splitPoint)
+        quickSort(left: left, right: splitPoint - 1)
+        quickSort(left: splitPoint + 1, right: right)
     }
 }

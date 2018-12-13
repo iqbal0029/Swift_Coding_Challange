@@ -104,5 +104,102 @@ func challenge58(input: String) -> Bool {
  Quick sort
  */
 func challenge59() {
-    print([12, 5, 4, 9, 3, 2, 1].quickSorted())
+    var array = [12, 5, 4, 9, 3, 2, 1]
+    //print(array.quickSorted())
+    array.qSort()
+    print(array)
+}
+
+/*
+ Create a function that detects whether either player has won in a game of Tic-Tac-Toe.
+ Tip: A tic-tac-toe board is 3x3, containing single letters that are either X, O, or empty. A win is three Xs or Os in a straight line.
+ Sample input and output
+ • The array [["X", "", "O"], ["", "X", "O"], ["", "", "X"]] should return true.
+ • The array [["X", "", "O"], ["X", "", "O"], ["X", "", ""]] should return true.
+ • The array [["", "X", ""], ["O", "X", ""], ["O", "X", ""]] should return true.
+ • The array [["", "X", ""], ["O", "X", ""], ["O", "", "X"]] should return false.
+ • The array [["", "", ""], ["", "", ""], ["", "", ""]] should return false.
+ */
+func challenge60(input: [[String]]) -> Bool {
+    guard input.count == 3, input.reduce(true, { $0 && $1.count==3 })
+    else { return false }
+    func isWin(_ first: String, _ second: String, _ third: String) -> Bool {
+        return !first.isEmpty && first == second && first == third
+    }
+
+    for i in 0 ..< 3 {
+        //row
+        if isWin(input[i][0], input[i][1], input[i][2]) {
+            return true
+        }
+
+        //column
+        if isWin(input[0][i], input[1][i], input[2][i]) {
+            return true
+        }
+    }
+
+    //column from top left to bottom right
+    let diagonal1 = isWin(input[0][0], input[1][1], input[2][2])
+
+    //column from bottom left to top right
+    let diagonal2 = isWin(input[0][2], input[1][1], input[2][0])
+    return diagonal1 && diagonal2
+}
+
+/*
+ Write a function that returns an array of prime numbers from 2 up to but excluding N, taking
+ care to be as efficient as possible.
+ */
+func challenge61(upTo max: Int) -> [Int] {
+    guard max > 1 else { return [] } //excluding max
+
+    var sieve = [Bool](repeating: true, count: max)
+    sieve[0] = false
+    sieve[1] = false
+    for number in 2 ..< max {
+        if sieve[number] == true {
+            for multipleOfNumber in stride(from: number*number, to: max, by: number) {
+                sieve[multipleOfNumber] = false
+            }
+        }
+    }
+    return sieve.enumerated().compactMap { $0.element == true ? $0.offset : nil }
+}
+
+/*
+ Write a function that accepts an array of CGPoint pairs, and returns an array of the angles
+ between each point pair. Return the angles in degrees, where 0 or 360 is straight up.
+ */
+func challenge62() {
+    
+    func challenge62(points: [(first: CGPoint, second: CGPoint)]) -> [CGFloat] {
+        return points.map {
+            let radians = atan2($0.first.y - $0.second.y, $0.first.x
+                - $0.second.x)
+            var degrees = (radians * 180 / CGFloat.pi) - 90
+            if (degrees < 0) { degrees += 360.0 }
+            if degrees == 360 { degrees = 0 }
+            return degrees
+        }
+    }
+
+    var points = [(first: CGPoint, second: CGPoint)]()
+    points.append((first: CGPoint.zero, second: CGPoint(x: 0, y:
+        -100)))
+    points.append((first: CGPoint.zero, second: CGPoint(x: 100, y:
+        -100)))
+    points.append((first: CGPoint.zero, second: CGPoint(x: 100, y:
+        0)))
+    points.append((first: CGPoint.zero, second: CGPoint(x: 100, y:
+        100)))
+    points.append((first: CGPoint.zero, second: CGPoint(x: 0, y:
+        100)))
+    points.append((first: CGPoint.zero, second: CGPoint(x: -100, y:
+        100)))
+    points.append((first: CGPoint.zero, second: CGPoint(x: -100, y:
+        0)))
+    points.append((first: CGPoint.zero, second: CGPoint(x: -100, y:
+        -100)))
+    print(challenge62(points: points))
 }

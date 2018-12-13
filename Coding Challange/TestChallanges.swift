@@ -14,7 +14,10 @@ class TestChallanges {
         //challenge56()
         //print(challenge57(first: 3.14159, second: 2.03048))
         //print(challenge58(input: "([])(<{}>)"))
-        challenge59()
+        //challenge59()
+        //print(challenge60(input: [["", "X", ""], ["O", "X", ""], ["O", "X", ""]]))
+        //print(challenge61(upTo: 10_000_000))
+        challenge62()
     }
 
     //MARK: Chapter 4 Collections
